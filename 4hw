@@ -1,0 +1,2 @@
+//finding min of array
+//given an array, write a function swap, swap(a,i,j) a[i]->a[j] and a[j]->a[i]  For e.g. [1, 5, 2, 3], 0, 2 => [2, 5, 1, 3]
