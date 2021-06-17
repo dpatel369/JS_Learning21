@@ -41,14 +41,14 @@
 
 //6
 
-function printAlt(arr,start,step,end){
-	for(i=start; i<end; i=i+step+1){
-		console.log(arr[i])
-	}
-}
-arr = [3,4,9,7,5,3,1,8,9,11,17,5]
-// x= console.log(printAlt(arr,2,2,10))
-// console.log(x
+// function printAlt(arr,start,step,end){
+// 	for(i=start; i<end; i=i+step+1){
+// 		console.log(arr[i])
+// 	}
+// }
+// arr = [3,4,9,7,5,3,1,8,9,11,17,5]
+// printAlt(arr,2,2,10)
+
 
 
 
