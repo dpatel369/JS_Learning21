@@ -1,8 +1,8 @@
-// if('1'=== true){
-// 	console.log("Hello World!")
-//} 
-//=== checks for types and value 
-// while == checks for value 
+if('1'=== true){
+	console.log("Hello World!")
+} 
+=== checks for types and value 
+while == checks for value 
 
 
 
