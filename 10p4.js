@@ -28,12 +28,12 @@ function min(input2) {
 console.log(min(student))
 
 function avg(input3) {
-	var c = 0
+	var sum = 0
 	var total = 0
 	for(i=0; i<student.friends_Height.length; i++){
-		var c = (student.friends_Height[i] + c)
+		var sum = (student.friends_Height[i] + sum)
 	}
-	total = (c/student.friends_Height.length)
+	total = (sum/student.friends_Height.length)
 	return total
 }
 console.log(avg(student))
