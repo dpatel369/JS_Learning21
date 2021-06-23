@@ -12,7 +12,7 @@ let course_2 = {
 
 let course_3 = {
 	courseNum : "CS332",
-	marks: 85
+	marks: 97
 }
 
 let course_4 = {
@@ -35,11 +35,13 @@ let student = {
 
 function highestMark(give1) {
 	maxMark = student.courses[0]["marks"]
+	name = student.courses[0].courseNum
 	for(i=0; i<student.courses.length; i++){
 		if(student.courses[i]["marks"] > maxMark){
-			maxMark = student.courses[i].courseNum
+			maxMark = student.courses[i]["marks"]
+			name = student.courses[i].courseNum
 		}
 	}
-	 return maxMark
+	 return name
 }
 console.log(highestMark(student))
