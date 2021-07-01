@@ -16,7 +16,7 @@ for(var a=0 ; a<arr.length; a++){
 
 //2
 
-var arrs = [[400,2,3], [2000,7000,10], [1200,5000,9]]
+var arrs = [[400,3,12], [2000,7000,10], [1200,5000,9]]
 
 function maxAvg(input1) {
 	var sum = 0

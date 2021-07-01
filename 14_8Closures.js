@@ -7,10 +7,10 @@ function f(a) {
 	// return g();
 }
 let h = f(2);
-console.log(h())
+console.log(h()) //4
 
 h = f(3);
-console.log(h())
+console.log(h()) //5
 
 
 //HW make a closure for cricket player statistics
