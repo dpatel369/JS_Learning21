@@ -113,3 +113,12 @@ return tr
 }
 
 console.log(transpose(list))
+
+
+var a  = [2,3,4,5]
+
+const index = a.indexOf(4);
+a.splice(index, 1)
+
+
+console.log(a)

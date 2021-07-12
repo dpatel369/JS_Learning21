@@ -21,7 +21,7 @@ for(var i=0; i<arr.length; i++){
 console.log(arr)
 
 
-
+console.log("-------------------------------------------------------------------------")
 
 //Bubble sort
 
@@ -40,6 +40,10 @@ function bubbleSort(input) {
 	return input
 }
 console.log(bubbleSort(listArr))
+
+
+console.log("-------------------------------------------------------------------------")
+
 
 //Inseration sort
 
