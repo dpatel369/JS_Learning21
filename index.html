@@ -36,28 +36,28 @@
         <tr>
           <td>ODI</td>
           <td>350</td>
-          <td>10773</td>
+          <td id="odi">10773</td>
           <td>50.6</td>
           <td>87.6</td>
         </tr>
         <tr>
             <td>T20I</td>
             <td>98</td>
-            <td>1617</td>
+            <td id="t20">1617</td>
             <td>37.6</td>
             <td>126.1</td>
         </tr>
         <tr>
             <td>IPL</td>
             <td>211</td>
-            <td>4669</td>
+            <td id="ipl">4669</td>
             <td>40.2</td>
             <td>136.6</td>
         </tr>
         <tr>
             <td>Test</td>
             <td>90</td>
-            <td>4876</td>
+            <td id="test">4876</td>
             <td>38.1</td>
             <td>59.1</td>
         </tr>
@@ -79,5 +79,34 @@
         <p>2011 ICC Cricket World Cup!</p>
         <img src="https://static.toiimg.com/thumb/msid-74942075,width-1200,height-900,resizemode-4/.jpg" alt="2011" width="400" height="233">
     </div>
+    <div class ="form">
+        <input id="in" type="number" placeholder="Enter number of Runs">
+        <input id="format" type="text" placeholder="Enter the Format">
+        <button onclick="myFunction()">Submit</button>
+    </form>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("in").value;
+        var z = document.getElementById("format").value;
+        switch(z){
+            case "odi":
+                var y = document.getElementById("odi").innerHTML;
+                document.getElementById("odi").innerHTML = (parseFloat(x)+parseFloat(y));
+                break;
+            case "t20":
+                var y = document.getElementById("t20").innerHTML;
+                document.getElementById("t20").innerHTML = (parseFloat(x)+parseFloat(y));
+                break;
+            case "ipl":
+                var y = document.getElementById("ipl").innerHTML;
+                document.getElementById("ipl").innerHTML = (parseFloat(x)+parseFloat(y));
+                break;
+            case "test":
+                var y = document.getElementById("test").innerHTML;
+                document.getElementById("test").innerHTML = (parseFloat(x)+parseFloat(y));
+                break;
+        }
+        }
+    </script>
   </body>
 </html>

@@ -25,6 +25,10 @@ h1{
     top: 410px; 
 }
 
+.info:hover{
+  color: red;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -109,4 +113,10 @@ table {
     border: 3px solid green;
     border-radius: 6px;
     padding: 4px;
+}
+
+.form{
+  position: absolute;
+  top:400px;
+  left:61.5%;
 }
