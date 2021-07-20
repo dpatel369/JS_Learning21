@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="mystyle.css">
+    <script src="first.js"></script>
   </head>
   <body>
     <h1>Mahendra Singh Dhoni</h1>
@@ -21,44 +22,59 @@
         <p3>Captain COOL</p3>
     </div>
 
-    <div class="info">
-        <p>- Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni is the only captain to have won all three ICC trophies. Under his captaincy, India won the T20 World Cup in 2007, the World Cup in 2011, and the ICC Champions Trophy in 2013.</p>
+    <div class="info" ondblclick="bioInfo()">
+        <p id="description">- Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni is the only captain to have won all three ICC trophies. Under his captaincy, India won the T20 World Cup in 2007, the World Cup in 2011, and the ICC Champions Trophy in 2013.</p>
     </div>
 
     <table>
         <tr>
           <th>Format</th>
-          <th>M</th>
+          <th>Match</th>
+          <th>Inn</th>
+          <th>NO</th>
           <th>Runs</th>
           <th>Avg</th>
+          <th>BF</th>
           <th>SR</th>
         </tr>
         <tr>
           <td>ODI</td>
-          <td>350</td>
+          <td id="odim">350</td>
+          <td>297</td>
+          <td>84</td>
           <td id="odi">10773</td>
           <td>50.6</td>
+          <td id="odiball">12303</td>
           <td>87.6</td>
         </tr>
         <tr>
             <td>T20I</td>
-            <td>98</td>
+            <td id="t20m">98</td>
+            <td>85</td>
+            <td>42</td>
             <td id="t20">1617</td>
             <td>37.6</td>
+            <td id="t20ball">1282</td>
             <td>126.1</td>
         </tr>
         <tr>
             <td>IPL</td>
-            <td>211</td>
+            <td id="iplm">211</td>
+            <td>186</td>
+            <td>70</td>
             <td id="ipl">4669</td>
             <td>40.2</td>
+            <td id="iplball">3417</td>
             <td>136.6</td>
         </tr>
         <tr>
             <td>Test</td>
-            <td>90</td>
+            <td id="testm">90</td>
+            <td>144</td>
+            <td>16</td>
             <td id="test">4876</td>
             <td>38.1</td>
+            <td id="testball">8249</td>
             <td>59.1</td>
         </tr>
     </table>
@@ -67,46 +83,23 @@
         <h2>Achievement's</h2>
     </div>
 
-    <div class="achievement1">
+    <div class="achievement3">
         <p>2013 ICC Champions Trophy!</p>
         <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/06/23/910420-twitter-3.jpg" alt="2013" width="400" height="233">
     </div>
-    <div class="achievement2">
+    <div class="achievement1">
         <p>2007 ICC World T20!</p>
         <img src="https://www.espncricinfo.com/db/PICTURES/CMS/80000/80084.jpg" alt="2007" width="400" height="233">
     </div>
-    <div class="achievement3">
+    <div class="achievement2">
         <p>2011 ICC Cricket World Cup!</p>
         <img src="https://static.toiimg.com/thumb/msid-74942075,width-1200,height-900,resizemode-4/.jpg" alt="2011" width="400" height="233">
     </div>
     <div class ="form">
-        <input id="in" type="number" placeholder="Enter number of Runs">
         <input id="format" type="text" placeholder="Enter the Format">
+        <input id="in" type="number" placeholder="Enter number of Runs">
+        <input id="ball" type="number" placeholder="BF #">
         <button onclick="myFunction()">Submit</button>
-    </form>
-    <script>
-        function myFunction() {
-        var x = document.getElementById("in").value;
-        var z = document.getElementById("format").value;
-        switch(z){
-            case "odi":
-                var y = document.getElementById("odi").innerHTML;
-                document.getElementById("odi").innerHTML = (parseFloat(x)+parseFloat(y));
-                break;
-            case "t20":
-                var y = document.getElementById("t20").innerHTML;
-                document.getElementById("t20").innerHTML = (parseFloat(x)+parseFloat(y));
-                break;
-            case "ipl":
-                var y = document.getElementById("ipl").innerHTML;
-                document.getElementById("ipl").innerHTML = (parseFloat(x)+parseFloat(y));
-                break;
-            case "test":
-                var y = document.getElementById("test").innerHTML;
-                document.getElementById("test").innerHTML = (parseFloat(x)+parseFloat(y));
-                break;
-        }
-        }
-    </script>
+    </div>
   </body>
 </html>

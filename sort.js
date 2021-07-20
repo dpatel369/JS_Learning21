@@ -87,7 +87,7 @@ console.log("-------------------------")
 //Bubble Sort
 
 var bubbleSort = function(list) {
-	for(var p=0; p<list.length-2; p++){
+	for(var p=0; p<list.length-1; p++){
 		console.log("p", p)
 		var count = 0 
 		for(var i=0; i<list.length-p-1; i++) {
@@ -105,5 +105,5 @@ var bubbleSort = function(list) {
 	}
 	return list
 }
-var list = [1,2,3,5,4,0]
+var list = [1,2,3,4,5]
 console.log(bubbleSort(list))
