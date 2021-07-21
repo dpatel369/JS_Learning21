@@ -4,27 +4,17 @@
     <link rel="stylesheet" href="mystyle.css">
     <script src="first.js"></script>
   </head>
-  <body>
-    <h1>Mahendra Singh Dhoni</h1>
-    <div class="pic">
-        <img src="https://static.toiimg.com/thumb/msid-82106773,width-1200,height-900,resizemode-4/.jpg" alt="MSPIC" width="500" height="333">
+  <body onload= pageload()>
+    <div class="name" id="coolmsd">
+    </div>
+    <div class="pic" id="biopic">
     </div>
 
-    <div class="card">
-        <h3>Indian cricketer</h3>
-        <p class = "title">Born - July 7, 1981</p>
-        <p1>Right-Handed Batsman</p1>
-        <br>
-        <br>
-        <p2>Wicketkeeper</p2>
-        <br>
-        <br>
-        <p3>Captain COOL</p3>
+    <div class="card" id="card">
     </div>
 
-    <div class="info" ondblclick="bioInfo()">
-        <p id="description">- Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni is the only captain to have won all three ICC trophies. Under his captaincy, India won the T20 World Cup in 2007, the World Cup in 2011, and the ICC Champions Trophy in 2013.</p>
-    </div>
+    <div class="aboutDhoni" ondblclick="bioInfo()" id="bio">
+     </div>
 
     <table>
         <tr>
@@ -40,8 +30,8 @@
         <tr>
           <td>ODI</td>
           <td id="odim">350</td>
-          <td>297</td>
-          <td>84</td>
+          <td id="odiinn">297</td>
+          <td id="odino">84</td>
           <td id="odi">10773</td>
           <td>50.6</td>
           <td id="odiball">12303</td>
@@ -50,8 +40,8 @@
         <tr>
             <td>T20I</td>
             <td id="t20m">98</td>
-            <td>85</td>
-            <td>42</td>
+            <td id="t20inn">85</td>
+            <td id="t20no">42</td>
             <td id="t20">1617</td>
             <td>37.6</td>
             <td id="t20ball">1282</td>
@@ -60,8 +50,8 @@
         <tr>
             <td>IPL</td>
             <td id="iplm">211</td>
-            <td>186</td>
-            <td>70</td>
+            <td id="t20inn">186</td>
+            <td id="iplno">70</td>
             <td id="ipl">4669</td>
             <td>40.2</td>
             <td id="iplball">3417</td>
@@ -70,8 +60,8 @@
         <tr>
             <td>Test</td>
             <td id="testm">90</td>
-            <td>144</td>
-            <td>16</td>
+            <td id="testinn">144</td>
+            <td id="testno">16</td>
             <td id="test">4876</td>
             <td>38.1</td>
             <td id="testball">8249</td>
@@ -79,26 +69,21 @@
         </tr>
     </table>
 
-    <div class="achievement">
-        <h2>Achievement's</h2>
+    <div class="achievement" id="achievement">
     </div>
 
-    <div class="achievement3">
-        <p>2013 ICC Champions Trophy!</p>
-        <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/06/23/910420-twitter-3.jpg" alt="2013" width="400" height="233">
+    <div class="achievement3" id="achievement3">
     </div>
-    <div class="achievement1">
-        <p>2007 ICC World T20!</p>
-        <img src="https://www.espncricinfo.com/db/PICTURES/CMS/80000/80084.jpg" alt="2007" width="400" height="233">
+    <div class="achievement1" id="achievement1">
     </div>
-    <div class="achievement2">
-        <p>2011 ICC Cricket World Cup!</p>
-        <img src="https://static.toiimg.com/thumb/msid-74942075,width-1200,height-900,resizemode-4/.jpg" alt="2011" width="400" height="233">
+    <div class="achievement2" id ="achievement2">
     </div>
     <div class ="form">
         <input id="format" type="text" placeholder="Enter the Format">
+        <input id="BAT" type="text" placeholder="Did He Bat? Y/N">
         <input id="in" type="number" placeholder="Enter number of Runs">
         <input id="ball" type="number" placeholder="BF #">
+        <input id="NOTOUT" type="text" placeholder="OUT or NOT OUT?">
         <button onclick="myFunction()">Submit</button>
     </div>
   </body>
