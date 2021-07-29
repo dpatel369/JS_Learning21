@@ -34,7 +34,7 @@ function myFunction() {
                     alert("Can't update the stats did not Bat")
                     break
                 }
-                if(notout == "yes"){
+                if(notout == "yes" || notout == "Yes" || notout == "YES"){
                     var notouts = document.getElementById("odino").innerHTML;  
                     document.getElementById("odino").innerHTML = (parseFloat(notouts)+1);
                 }
@@ -61,7 +61,7 @@ function myFunction() {
                     alert("Can't update the stats did not Bat")
                     break
                 }
-                if(notout == "yes"){
+                if(notout == "yes" || notout == "Yes" || notout == "YES"){
                     var notouts = document.getElementById("t20no").innerHTML;  
                     document.getElementById("t20no").innerHTML = (parseFloat(notouts)+1);
                 }
@@ -89,7 +89,7 @@ function myFunction() {
                     alert("Can't update the stats did not Bat")
                     break
                 }
-                if(notout == "yes"){
+                if(notout == "yes" || notout == "Yes" || notout == "YES"){
                     var notouts = document.getElementById("iplno").innerHTML;  
                     document.getElementById("iplno").innerHTML = (parseFloat(notouts)+1);
                 }
@@ -116,7 +116,7 @@ function myFunction() {
                     alert("Can't update the stats did not Bat")
                     break
                 }
-                if(notout == "yes"){
+                if(notout == "yes" || notout == "Yes" || notout == "YES"){
                     var notouts = document.getElementById("testno").innerHTML;  
                     document.getElementById("testno").innerHTML = (parseFloat(notouts)+1);
                 }
@@ -154,12 +154,24 @@ function pageload() {
     images2()
     images3()
     playername()
+    inputform()
+    inputform1()
+    inputform2()
+    inputform3()
+    inputform4()
+    formButton()
+    scoreTable()
+    odiScore()
+    t20Score()
+    iplScore()
+    testScore()
 }
 
 function aboutDhoni() {
     let about = document.getElementById("bio")
     let header = document.createElement("p")
-    header.innerText = "Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni is the only captain to have won all three ICC trophies. Under his captaincy, India won the T20 World Cup in 2007, the World Cup in 2011, and the ICC Champions Trophy in 2013"
+    header.innerText = "Mahendra Singh Dhoni, is a former Indian international cricketer who captained the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni is the only captain to have won all three ICC trophies. Under his captaincy, India won the T20 World Cup in 2007, the World Cup in 2011, and the ICC Champions Trophy in 2013."
+    header.setAttribute("ondblclick", "bioInfo()")
     bio.appendChild(header)
 }
 
@@ -242,9 +254,223 @@ function playername() {
 }
 
 function inputform() {
-    let nameofformat = document.getElementById("infotab")
+    let nameofformat = document.getElementById("forms")
     let inputofformat = document.createElement("input")
-    input.type="number"
-    inputofformat.placeholder = "Enter the Format"
+    inputofformat.setAttribute("id", "format")
+    inputofformat.setAttribute("type", "text")
+    inputofformat.setAttribute("placeholder", "Enter the Format")
     nameofformat.appendChild(inputofformat)
+}
+
+function inputform1() {
+    let BAT = document.getElementById("forms")
+    let batinfo = document.createElement("input")
+    batinfo.id = "BAT"
+    batinfo.type = "text"
+    batinfo.placeholder = "Did He Bat? Y/N"
+    BAT.appendChild(batinfo)
+}
+
+function inputform2() {
+    let inning = document.getElementById("forms")
+    let inningInfo = document.createElement("input")
+    inningInfo.id = "in" 
+    inningInfo.type = "number"
+    inningInfo.placeholder = "Enter number of Runs"
+    inning.appendChild(inningInfo)
+}
+
+function inputform3() {
+    let BALL = document.getElementById("forms")
+    let Ballinfo = document.createElement("input")
+    Ballinfo.setAttribute("id", "ball")
+    Ballinfo.setAttribute("type", "number")
+    Ballinfo.setAttribute("placeholder", "BF #")
+    BALL.appendChild(Ballinfo)
+}
+
+function inputform4() {
+    let NOTOUT = document.getElementById("forms")
+    let notoutInfo = document.createElement("input")
+    notoutInfo.setAttribute("id", "NOTOUT")
+    notoutInfo.setAttribute("type", "text")
+    notoutInfo.setAttribute("placeholder", "NOT OUT? YES/NO")
+    NOTOUT.appendChild(notoutInfo)
+}
+
+function formButton() {
+    let Button = document.getElementById("forms")
+    let formButtons = document.createElement("button")
+    formButtons.innerHTML ="SUBMIT"
+    formButtons.setAttribute("onclick", "myFunction()")
+    Button.appendChild(formButtons)
+}
+
+function scoreTable() {
+    let table = document.getElementById("statTable")
+    let tableHeader = document.createElement("tr")
+    let tableHeader1 = document.createElement("th")
+    tableHeader1.innerHTML = "Format"
+    table.appendChild(tableHeader1)
+    let tableHeader2 = document.createElement("th")
+    tableHeader2.innerHTML = "Match"
+    table.appendChild(tableHeader2)
+    let tableHeader3 = document.createElement("th")
+    tableHeader3.innerHTML = "Inn"
+    table.appendChild(tableHeader3)
+    let tableHeader4 = document.createElement("th")
+    tableHeader4.innerHTML = "NO"
+    table.appendChild(tableHeader4)
+    let tableHeader5 = document.createElement("th")
+    tableHeader5.innerHTML = "Runs"
+    table.appendChild(tableHeader5)
+    let tableHeader6 = document.createElement("th")
+    tableHeader6.innerHTML = "Avg"
+    table.appendChild(tableHeader6)
+    let tableHeader7 = document.createElement("th")
+    tableHeader7.innerHTML = "BF"
+    table.appendChild(tableHeader7)
+    let tableHeader8 = document.createElement("th")
+    tableHeader8.innerHTML = "SR"
+    table.appendChild(tableHeader8)
+}
+
+function odiScore() {
+    let table1 = document.getElementById("statTable")
+    let odiHeader = document.createElement("tr")
+    table1.appendChild(odiHeader)
+    let odiHeader1 = document.createElement("td")
+    odiHeader1.innerHTML = "ODI"
+    table1.appendChild(odiHeader1)
+    let odiHeader2 = document.createElement("td")
+    odiHeader2.innerHTML = "350"
+    odiHeader2.setAttribute("id", "odim")
+    table1.appendChild(odiHeader2)
+    let odiHeader3 = document.createElement("td")
+    odiHeader3.innerHTML = "297"
+    odiHeader3.setAttribute("id", "odiinn")
+    table1.appendChild(odiHeader3)
+    let odiHeader4 = document.createElement("td")
+    odiHeader4.innerHTML = "84"
+    odiHeader4.setAttribute("id", "odino")
+    table1.appendChild(odiHeader4)
+    let odiHeader5 = document.createElement("td")
+    odiHeader5.innerHTML = "10773"
+    odiHeader5.setAttribute("id", "odi")
+    table1.appendChild(odiHeader5)
+    let odiHeader6 = document.createElement("td")
+    odiHeader6.innerHTML = "50.6"
+    table1.appendChild(odiHeader6)
+    let odiHeader7 = document.createElement("td")
+    odiHeader7.innerHTML = "12303"
+    odiHeader7.setAttribute("id", "odiball")
+    table1.appendChild(odiHeader7)
+    let odiHeader8 = document.createElement("td")
+    odiHeader8.innerHTML = "87.6"
+    table1.appendChild(odiHeader8)
+}
+
+function t20Score() {
+    let table2 = document.getElementById("statTable")
+    let t20Header = document.createElement("tr")
+    table2.appendChild(t20Header)
+    let t20Header1 = document.createElement("td")
+    t20Header1.innerHTML = "T20I"
+    table2.appendChild(t20Header1)
+    let t20Header2 = document.createElement("td")
+    t20Header2.innerHTML = "98"
+    t20Header2.setAttribute("id", "t20m")
+    table2.appendChild(t20Header2)
+    let t20Header3 = document.createElement("td")
+    t20Header3.innerHTML = "85"
+    t20Header3.setAttribute("id", "t20inn")
+    table2.appendChild(t20Header3)
+    let t20Header4 = document.createElement("td")
+    t20Header4.innerHTML = "42"
+    t20Header4.setAttribute("id", "t20no")
+    table2.appendChild(t20Header4)
+    let t20Header5 = document.createElement("td")
+    t20Header5.innerHTML = "1617"
+    t20Header5.setAttribute("id", "t20")
+    table2.appendChild(t20Header5)
+    let t20Header6 = document.createElement("td")
+    t20Header6.innerHTML = "37.6"
+    table2.appendChild(t20Header6)
+    let t20Header7 = document.createElement("td")
+    t20Header7.innerHTML = "1282"
+    t20Header7.setAttribute("id", "t20ball")
+    table2.appendChild(t20Header7)
+    let t20Header8 = document.createElement("td")
+    t20Header8.innerHTML = "126.1"
+    table2.appendChild(t20Header8)
+}
+
+function iplScore() {
+    let table3 = document.getElementById("statTable")
+    let iplHeader = document.createElement("tr")
+    table3.appendChild(iplHeader)
+    let iplHeader1 = document.createElement("td")
+    iplHeader1.innerHTML = "T20I"
+    table3.appendChild(iplHeader1)
+    let iplHeader2 = document.createElement("td")
+    iplHeader2.innerHTML = "211"
+    iplHeader2.setAttribute("id", "iplm")
+    table3.appendChild(iplHeader2)
+    let iplHeader3 = document.createElement("td")
+    iplHeader3.innerHTML = "186"
+    iplHeader3.setAttribute("id", "t20inn")
+    table3.appendChild(iplHeader3)
+    let iplHeader4 = document.createElement("td")
+    iplHeader4.innerHTML = "70"
+    iplHeader4.setAttribute("id", "iplno")
+    table3.appendChild(iplHeader4)
+    let iplHeader5 = document.createElement("td")
+    iplHeader5.innerHTML = "4669"
+    iplHeader5.setAttribute("id", "ipl")
+    table3.appendChild(iplHeader5)
+    let iplHeader6 = document.createElement("td")
+    iplHeader6.innerHTML = "40.2"
+    table3.appendChild(iplHeader6)
+    let iplHeader7 = document.createElement("td")
+    iplHeader7.innerHTML = "3417"
+    iplHeader7.setAttribute("id", "iplball")
+    table3.appendChild(iplHeader7)
+    let iplHeader8 = document.createElement("td")
+    iplHeader8.innerHTML = "136.6"
+    table3.appendChild(iplHeader8)
+}
+
+function testScore() {
+    let table4 = document.getElementById("statTable")
+    let testHeader = document.createElement("tr")
+    table4.appendChild(testHeader)
+    let testHeader1 = document.createElement("td")
+    testHeader1.innerHTML = "Test"
+    table4.appendChild(testHeader1)
+    let testHeader2 = document.createElement("td")
+    testHeader2.innerHTML = "90"
+    testHeader2.setAttribute("id", "testm")
+    table4.appendChild(testHeader2)
+    let testHeader3 = document.createElement("td")
+    testHeader3.innerHTML = "144"
+    testHeader3.setAttribute("id", "testinn")
+    table4.appendChild(testHeader3)
+    let testHeader4 = document.createElement("td")
+    testHeader4.innerHTML = "16"
+    testHeader4.setAttribute("id", "testno")
+    table4.appendChild(testHeader4)
+    let testHeader5 = document.createElement("td")
+    testHeader5.innerHTML = "4876"
+    testHeader5.setAttribute("id", "test")
+    table4.appendChild(testHeader5)
+    let testHeader6 = document.createElement("td")
+    testHeader6.innerHTML = "38.1"
+    table4.appendChild(testHeader6)
+    let testHeader7 = document.createElement("td")
+    testHeader7.innerHTML = "8249"
+    testHeader7.setAttribute("id", "testball")
+    table4.appendChild(testHeader7)
+    let testHeader8 = document.createElement("td")
+    testHeader8.innerHTML = "59.1"
+    table4.appendChild(testHeader8)
 }
