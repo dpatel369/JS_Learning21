@@ -7,9 +7,9 @@
 // Undefined = varibale doesn't exist
 //NAN = doesn't have accepting value 
 // Varibale can be type num, string , boolean, undefined
-//Every function has table (Name, value)
+//Every function has table (Name, value) //(object)
 //Function has it's own storage area
-//Global variable or table variable
+//Global variable or table variable //(aka object)
 // In c use write static for global variable
 
 function addTwo(a,b) {
