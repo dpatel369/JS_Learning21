@@ -1,0 +1,122 @@
+body {
+    background-color: lightblue;
+}
+
+.name{
+    color: black;
+    text-indent: 40%;
+    border-style: solid lightblue;
+    background-color: lightcoral;
+}
+
+.pic{
+    position: absolute ;
+    left: 25%;
+    top: 80px;
+}
+.pic img{
+    border-radius: 10%;
+}
+
+.aboutDhoni{
+    position: absolute ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    top: 430px; 
+}
+
+.aboutDhoni:hover{
+  color: red;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 38%;
+    top: 150px;
+    left: 61%;
+    height: 240px;
+    position: absolute;
+    background-color: white;
+    border: solid;
+    font-family:serif;
+  }
+  
+  td, th {
+    border: 1px solid gray;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    position: absolute;
+    left: 2%;
+    top:150px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    box-shadow: 5px 8px green;
+    width: 300px;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .achievement{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top:465px;
+    left:48%;
+    text-decoration: underline;
+    color: red;
+
+  }
+
+  .achievement1{
+      position: absolute;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      top: 520px;
+      left: 30px;
+      text-decoration: underline;
+      font-weight: bold;
+      border: 3px solid orange;
+      border-radius: 6px;
+      padding: 4px;
+  }
+
+  .achievement2{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    left: 560px;
+    top: 520px;
+    border: 3px solid blue;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.achievement3{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    left: 1070px;
+    top: 520px;
+    border: 3px solid green;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.form{
+  position: absolute;
+  top:400px;
+  left:61%;
+}
