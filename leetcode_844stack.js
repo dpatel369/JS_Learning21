@@ -17,9 +17,9 @@ var backspaceCompare = function(s, t) {
 			t1.pop()
 		}
 	}
-	return (s1.join("")==t1.join(""))?true:false
+	return (s1.join("")==t1.join("")) ?true:false
 }
 
-var s = "ab##1"
-var t = "c#d#1"
+var s = "ab##"
+var t = "c#d#"
 console.log(backspaceCompare(s,t))
