@@ -23,3 +23,9 @@
 
 //Position absolute - write top and left (works with div as parent)
 //Position fixed - according to the browser
+
+//Object Modelling 
+
+chess -(cell/tile) x fille/ y rank
+
+//OBJECT def - object is a responsible entity having knowing responsibility and doing responsibility.  
