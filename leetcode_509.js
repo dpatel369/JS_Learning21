@@ -20,5 +20,5 @@ var fib = function(n) {
 	sum = arrsum[n-1]+arrsum[n-2]
 	return sum
 };
-var n = 0
+var n = 3
 console.log(fib(n))
