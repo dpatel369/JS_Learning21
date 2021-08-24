@@ -2,7 +2,9 @@
 
 var selectionSort = function(array) {
 	for(var i=0; i<array.length; i++) {
+		console.log("i",i)
 		for(var p=i+1; p<array.length; p++) {
+			console.log("p=",p)
 			if(array[i]>array[p]) {
 				x = array[p]
 				array[p] = array[i]
