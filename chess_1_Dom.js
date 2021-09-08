@@ -23,10 +23,13 @@ function createTable(){
 
 function createRow(color, pieces, x){
     var tr = document.createElement("tr");
+    var id = ["a","b","c","d","e","f","g","h"]
     for(let i=0; i<8; i++){
         let td = document.createElement("td");
         td.width = 65
         td.height = 75
+        td.id = id[i] + x
+        td.setAttribute("onclick", "tileSelect(id)")
         td.style = "font-size:70px"
         td.bgColor = color
         if (color === "grey") {
@@ -47,6 +50,23 @@ function createRow(color, pieces, x){
         tr.appendChild(td)
     }
     return tr
+}
+
+function tileSelect(id){
+    var x = document.getElementById(id)
+    var nextTileID = (x.id[0]+(parseFloat(x.id[1])-1))
+    var previousId = ((x.id[0]+(parseFloat(x.id[1]))))
+    console.log(previousId)
+    var currentPiece = (x.innerHTML)
+    console.log(document.getElementById(x.id))
+    if(document.getElementById(nextTileID).innerHTML == ""){
+        document.getElementById(nextTileID).bgColor = "orange"
+    }
+    if(document.getElementById(nextTileID).bgColor == "orange"){
+        document.getElementById(nextTileID).innerHTML = currentPiece
+        document.getElementById(previousId).innerHTML = ""
+        document.getElementById(previousId).bgColor = ""
+    }
 }
 
 // function tr8(){
@@ -191,5 +211,21 @@ function createRow(color, pieces, x){
 //         t1.style = "font-size:70px"
 //         t1.innerHTML=pieces[i]
 //         tr1.appendChild(t1)
+//     }
+// }
+
+
+
+// function tileSelect(id){
+//     var x = document.getElementById(id)
+//     var nextTileID = (x.id[0]+(parseFloat(x.id[1])-1))
+//     var currentPiece = (x.innerHTML)
+//     console.log(document.getElementById(x.id))
+//     if(document.getElementById(nextTileID).innerHTML == ""){
+//         document.getElementById(nextTileID).bgColor = "orange"
+//     }
+//     if(document.getElementById(nextTileID).bgColor == "orange"){
+//         document.getElementById(nextTileID).innerHTML = currentPiece
+//         document.getElementById(currentPiece).innerHTML = ""
 //     }
 // }
